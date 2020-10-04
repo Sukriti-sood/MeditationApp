@@ -1,0 +1,74 @@
+#myVideo {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+  }
+
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  body{
+    background-color: #0038a8!important;
+    background-image: url("https://www.transparenttextures.com/patterns/gray-floral.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  }
+  h1{
+      color:white;
+  }
+
+  .front{
+    min-height: 97vh;
+  }
+  .e1{
+    width: 100vw;
+  }
+  .med{
+    padding-left: 35px;
+  }
+  .pquote{
+    color: white;
+    font-size: 4vh;
+    padding-left: 35px;
+    font-family: 'Philosopher', sans-serif;
+  }
+  .medbutton{
+    font-size: 3vh!important;
+    background-color: #0038a8!important;
+    border-radius: 10px!important;
+    font-family: 'Markazi Text', serif;
+    margin-left: 8px;
+  }
+  Button{
+    font-size: 3vh!important;
+    border-radius: 10px!important;
+    font-family: 'Markazi Text', serif!important;
+    color: white!important;
+    box-shadow:5px 5px 3px #3639ca
+
+  }
+  .play{
+    min-height: 50vh;
+  }
+  i{
+    font-size: 24em!important;
+    margin: auto;
+  }
+  .buttonrow{
+    margin-left:6vw!important;
+    margin-top: 17vh;
+  }
+  .time{
+    margin: auto;
+    font-family: 'Philosopher', sans-serif;
+
+    font-size: 15vmin!important;
+  }
+  Button:hover{
+    background-color: #82d6f0!important;
+  }
