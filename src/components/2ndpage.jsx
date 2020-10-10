@@ -4,31 +4,30 @@ import timecalc from "./helper"
 
 
 
-function Second() {
-
-    const [audio]=useState(new Audio("public/audio.mp3"));
+function Second() {  
+   
 
     const[elapsed,setelapsed]=useState(0);
     const[play,setplay]=useState(false);
-  
+    const[mute,setmute]=useState(true);
     useEffect(()=>{
       let interval = null;
      if (elapsed===0) {
-        audio.pause();
+        setmute(true);
         setplay(false)
       }
       else  if (play) {
         interval = setInterval(() => {
           setelapsed(elapsed => elapsed - 1000);
         }, 1000);
-        audio.play();
+        setmute(false);
       }
       else if(!play){
         clearInterval(interval);
-        audio.pause();
+        setmute(true)
       }
       return () => clearInterval(interval);
-    },[play,elapsed,audio]);
+    },[play,elapsed,mute]);
   
     
     const time=timecalc(elapsed);
@@ -50,6 +49,9 @@ function Second() {
     <Button outline className="col-2  offset-1" onClick={()=>setelapsed(15*60*1000)}>15 min</Button>
   
     </div>
+    <audio controls loop muted={mute} className="none" autoPlay>
+  <source src="/Audios/audio.mp3" type="audio/mp3" />
+</audio>
       </div>
   
     );

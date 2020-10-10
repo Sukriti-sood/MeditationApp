@@ -72,3 +72,6 @@
   Button:hover{
     background-color: #82d6f0!important;
   }
+  .none{
+    display:none;
+  }
